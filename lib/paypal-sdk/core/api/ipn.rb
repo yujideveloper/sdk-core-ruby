@@ -6,7 +6,7 @@ module PayPal
 
           END_POINTS = {
             :sandbox => "https://www.sandbox.paypal.com/cgi-bin/webscr",
-            :live    => "https://ipnpb.paypal.com/cgi-bin/webscr"
+            :live    => "https://www.paypal.com/cgi-bin/webscr"
           }
           VERIFIED   = "VERIFIED"
           INVALID    = "INVALID"
