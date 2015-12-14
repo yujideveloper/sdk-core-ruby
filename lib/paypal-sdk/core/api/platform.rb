@@ -28,7 +28,8 @@ module PayPal::SDK::Core
         "requestEnvelope" => { "errorLanguage" => "en_US" } })
       DEFAULT_END_POINTS = {
         :sandbox => "https://svcs.sandbox.paypal.com/",
-        :live    => "https://svcs.paypal.com/"
+        :live    => "https://svcs.paypal.com/",
+        :tls_test => "test-svcs.sandbox.paypal.com"
       }
 
       # Get service end point
