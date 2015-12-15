@@ -143,7 +143,7 @@ describe PayPal::SDK::Core::API::Merchant do
       lambda {
         client   = Merchant.new
         response = client.request("InvalidAction", TransactionSearchParams )
-      }.should raise_error PayPal::SDK::Core::Exceptions::ServerError
+      }.should raise_error PayPal::SDK::Core::Exceptions::ResourceNotFound
     end
 
     it "invalid params" do
