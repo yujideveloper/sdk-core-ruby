@@ -43,6 +43,10 @@ module PayPal::SDK::Core
         :live => {
           :three_token  => "https://api-3t.paypal.com/2.0/",
           :certificate  => "https://api.paypal.com/2.0/"
+        },
+        :tls_test => {
+          :certificate => "test-api.sandbox.paypal.com",
+          :three_token => "test-api-3t.sandbox.paypal.com"
         }
       }
 
