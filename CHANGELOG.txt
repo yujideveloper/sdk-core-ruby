@@ -1,6 +1,7 @@
 Version 0.3.4
   - Fix test cases
   - Update travis CI configuration
+  - Updated TLS 1.2 warning message
 
 Version 0.3.3
   - Add TLS 1.2 support
