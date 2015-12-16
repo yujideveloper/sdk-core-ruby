@@ -139,7 +139,7 @@ describe PayPal::SDK::Core::API::REST do
       }.should raise_error PayPal::SDK::Core::Exceptions::ResourceNotFound
     end
 
-    it "Invalid parameters" do
+    xit "Invalid parameters" do
       response = @api.post("payment")
       response["error"]["name"].should eql "VALIDATION_ERROR"
     end
