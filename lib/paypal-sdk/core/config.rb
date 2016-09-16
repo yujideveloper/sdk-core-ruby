@@ -241,7 +241,7 @@ module PayPal::SDK::Core
       def read_configurations(file_name = "config/paypal.yml")
         erb = ERB.new(File.read(file_name))
         erb.filename = file_name
-        YAML.load(erb.result)
+        YAML.load(erb.result) || {}
       end
 
     end
