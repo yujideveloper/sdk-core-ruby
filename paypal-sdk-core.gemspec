@@ -8,15 +8,14 @@ Gem::Specification.new do |gem|
   gem.version       = PayPal::SDK::Core::VERSION
   gem.authors       = ["PayPal"]
   gem.email         = ["DL-PP-Platform-Ruby-SDK@paypal.com"]
-  gem.description   = %q{Core library for PayPal ruby SDKs}
   gem.summary       = %q{Core library for PayPal ruby SDKs}
+  gem.description   = gem.summary
   gem.homepage      = "https://developer.paypal.com"
 
   gem.license       = "PayPal SDK License"
 
   gem.files         = Dir["{bin,spec,lib,data}/**/*"] + ["Rakefile", "README.md", "Gemfile", "CHANGELOG.txt", "LICENSE.txt"]
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.test_files    = gem.files.grep(%r{^(spec)/})
   gem.require_paths = ["lib"]
 
   gem.add_dependency('xml-simple')
