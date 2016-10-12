@@ -91,18 +91,17 @@ describe PayPal::SDK::Core::API::REST do
 
     it "Create Payment" do
       response = @api.post("payment", {
-        "intent" => "sale",
+        "intent" => "authorize",
+        "redirect_urls" => {
+          "return_url" => "http://example.com/your_redirect_url.html",
+          "cancel_url" => "http://example.com/your_cancel_url.html"
+        },
         "payer" => {
-          "payment_method" => "credit_card",
-          "funding_instruments" => [{
-            "credit_card" => {
-              "type" => "visa",
-              "number" => "4417119669820331",
-              "expire_month" => "11", "expire_year" => "2018",
-              "first_name" => "Joe", "last_name" => "Shopper" }}]},
+          "payment_method" => "paypal",
+        },
         "transactions" => [{
           "amount" => {
-            "total" => "7.47",
+            "total" => "0.08",
             "currency" => "USD" }}]})
       response["error"].should be_nil
     end
