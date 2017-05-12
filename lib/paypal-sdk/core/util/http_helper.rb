@@ -81,9 +81,9 @@ module PayPal::SDK::Core
 
         if Config.config.verbose_logging
           if response.code.to_i == 200
-            logger.info(response.body)
+            logger.info(response.body.force_encoding(Encoding::UTF_8))
           else
-            logger.warn(response.body)
+            logger.warn(response.body.force_encoding(Encoding::UTF_8))
           end
         end
 
